@@ -2,5 +2,9 @@
 src = 'src'
 out = 'out'
 libs = ['lib']
+libraries= [
+    './src/Contract.sol:ChainlinkTWAP:0x9068c42f083774e78165ec9ac2b9e8b5d26db52e',
+]
+
 
 # See more config options https://github.com/gakonst/foundry/tree/master/config

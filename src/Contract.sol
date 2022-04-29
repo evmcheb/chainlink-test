@@ -1,4 +1,10 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.10;
+pragma solidity ^0.8.13;
 
-contract Contract {}
+import {ChainlinkTWAP} from "./libraries/ChainlinkTWAP.sol";
+
+contract Contract {
+    function getPrice() public view returns (int latest) {
+        latest = ChainlinkTWAP.getLatestPrice(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE);
+    }
+}
