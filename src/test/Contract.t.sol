@@ -8,9 +8,14 @@ contract ContractTest is DSTest {
     Contract c = new Contract();
     function setUp() public {}
 
-    function testTWAP() public {
-        int twap = c.getPrice();
-        emit log_named_int("latest price", twap);
+    function testLatest() public {
+        int latest = c.getPrice();
+        emit log_named_int("latest price", latest);
+    }
+
+    function testTWAP1hr() public {
+        uint latest = c.getTWAPPrice(60*60);
+        emit log_named_uint("latest 1hr twap price", latest);
     }
 
     function testExample() public {

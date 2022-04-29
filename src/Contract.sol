@@ -7,4 +7,7 @@ contract Contract {
     function getPrice() public view returns (int latest) {
         latest = ChainlinkTWAP.getLatestPrice(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE);
     }
+    function getTWAPPrice(uint time) public view returns (uint latestTwap) {
+        latestTwap = ChainlinkTWAP.getTWAPPrice(0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE, time);
+    }
 }
